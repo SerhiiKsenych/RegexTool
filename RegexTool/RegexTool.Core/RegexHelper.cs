@@ -9,9 +9,16 @@ namespace RegexTool.Core
 {
     public class RegexHelper : IRegexHelper
     {
-        public string RegexIt(string inputText, string pattern, RegexOptions options, bool isMultipleMatch)
+        public string RegexIt(string inputText, string pattern, bool isMultiline, bool isMultipleMatch)
         {
             string result = String.Empty;
+            RegexOptions options = new RegexOptions();
+            if (isMultiline)
+                options = RegexOptions.Singleline;
+            
+            else
+                options = RegexOptions.None;
+
 
             if (isMultipleMatch)
             {

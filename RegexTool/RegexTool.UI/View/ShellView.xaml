@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:RegexTool.UI.View"
              xmlns:vm="clr-namespace:RegexTool.UI.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="1200"
+             Background="DarkSlateGray">
     <UserControl.DataContext>
         <vm:ShellViewModel/>
     </UserControl.DataContext>
@@ -24,8 +25,8 @@
         </Grid.RowDefinitions>
         <Border>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Expression"/>
-                <TextBox Text="{Binding Path=Expression,Mode=TwoWay}"
+                <Label Content="Pattern"/>
+                <TextBox Text="{Binding Path=Pattern,Mode=TwoWay}"
                          Style="{StaticResource patternTextBoxKey}"/>
                 <Border>
                     <StackPanel Orientation="Horizontal">
@@ -37,7 +38,8 @@
                 </Border>
 
                 <Button Content="Regex it" 
-                        Command="{Binding Path=CommandRegexIt}"/>
+                        Command="{Binding Path=CommandRegexIt}">
+                </Button>
             </StackPanel>
         </Border>
         <Border Grid.Row="1">

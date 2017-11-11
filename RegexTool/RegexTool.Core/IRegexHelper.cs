@@ -9,6 +9,6 @@ namespace RegexTool.Core
 {
     public interface IRegexHelper
     {
-        string RegexIt(string inputText, string pattern, RegexOptions options, bool isMultipleMatch);
+        string RegexIt(string inputText, string pattern, bool isMultiline, bool isMultipleMatch);
     }
 }
