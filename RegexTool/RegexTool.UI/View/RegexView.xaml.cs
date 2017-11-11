@@ -18,9 +18,9 @@ namespace RegexTool.UI.View
     /// <summary>
     /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class ShellView : UserControl
+    public partial class RegexView : UserControl
     {
-        public ShellView()
+        public RegexView()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace RegexTool.UI.ViewModel
 {
-    public class ShellViewModel : BindableBase
+    public class RegexViewModel : BindableBase
     {
         #region Fields and properties
 
@@ -43,7 +43,7 @@ namespace RegexTool.UI.ViewModel
 
         #region Ctor
 
-        public ShellViewModel()
+        public RegexViewModel()
         {
             CommandRegexIt = new DelegateCommand(RegexIt);
             this.SetRegexHelper(new RegexHelper());

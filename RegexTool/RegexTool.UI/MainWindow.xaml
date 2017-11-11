@@ -10,13 +10,13 @@
         WindowState="Maximized"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <DataTemplate DataType="{x:Type vm:ShellViewModel}">
-            <v:ShellView/>
+        <DataTemplate DataType="{x:Type vm:RegexViewModel}">
+            <v:RegexView/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentControl>
-            <vm:ShellViewModel/>
+            <vm:RegexViewModel/>
         </ContentControl>
     </Grid>
 </Window>
