@@ -15,8 +15,16 @@ namespace RegexTool.UI.ViewModel
     {
         #region Fields and properties
 
+        private static RegexViewModel _instance;
         private IRegexHelper _regexHelper;
         private RegexOptions _regexOptions;
+
+        public static RegexViewModel Instance()
+        {
+            if (_instance == null)
+                _instance = new RegexViewModel();
+            return _instance;
+        }
 
         private string _pattern;
         public string Pattern { get { return _pattern; } set { _pattern = value; OnPropertyChanged(nameof(Pattern)); } }

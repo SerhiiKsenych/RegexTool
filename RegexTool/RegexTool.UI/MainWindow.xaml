@@ -13,9 +13,19 @@
         <DataTemplate DataType="{x:Type vm:RegexViewModel}">
             <v:RegexView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:BrowserViewModel}">
+            <v:BrowserView/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
-        <ContentControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ContentControl Grid.Row="0">
+            <vm:BrowserViewModel/>
+        </ContentControl>
+        <ContentControl Grid.Row="1">
             <vm:RegexViewModel/>
         </ContentControl>
     </Grid>
